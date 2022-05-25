@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.date :date_of_birth
       t.float :total_spends, default: 0.0
       t.integer :loyalty_points_earned, default: 0
-      t.string :tier, default: 'standard'
+      t.string :tier, default: 'Standard'
       t.timestamps
     end
   end
