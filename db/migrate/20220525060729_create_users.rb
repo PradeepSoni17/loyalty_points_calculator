@@ -7,9 +7,6 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.float :total_spends, default: 0.0
       t.integer :loyalty_points_earned, default: 0
       t.string :tier, default: 'standard'
-
-      t.string :time_zone
-
       t.timestamps
     end
   end
