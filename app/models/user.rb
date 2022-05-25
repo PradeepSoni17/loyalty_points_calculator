@@ -20,10 +20,16 @@ def calculate_points_and_rewards
       tier = 'Standard'
     end
 
-    #Reward calculation
+    #Reward calculation    
+     last_two_cycle_transactions = self.user_transactions.where('DATE(created_at) >= ?', Date.today.end_of_month.days_ago(60)) 
+     if last_two_cycle_transactions.sum(:total_spends) > 1000
+       eligible_for_tier_update = true
+     end
 
-    
-
+     if Date.parse(self.date_of_birth.to_s).month == Date.today.month
+        eligible_for_free_cofee_reward = true        
+     end
+     
     self.save!
 
  end
