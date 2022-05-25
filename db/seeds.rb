@@ -7,28 +7,28 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-#  (1..10).each do |number|
-#     user = User.new
-#     user.full_name = 'User' + number.to_s 
-#     user.email = 'user' + number.to_s + '@example.com'
-#     user.date_of_birth = "1990-1-#{number}"
-#     user.total_spends = Random.rand(500..10000)
-#     user.loyalty_points_earned = Random.rand(100..3000)
-#     user.save!
-#  end
+ (1..10).each do |number|
+    user = User.new
+    user.full_name = 'User' + number.to_s 
+    user.email = 'user' + number.to_s + '@example.com'
+    user.date_of_birth = "1990-1-#{number}"
+    user.total_spends = Random.rand(500..10000)
+    user.loyalty_points_earned = Random.rand(100..3000)
+    user.save!
+ end
 
 
-# ['free_coffee_reward', '5_percent_cash_rebate_reward', 'free_movie_ticket_reward', 'airport_lounge_access_reward'].each do |reward_name|
-#   reward = Reward.new(reward_name: reward_name)
-#   reward.save!
-# end
+['free_coffee_reward', '5_percent_cash_rebate_reward', 'free_movie_ticket_reward', 'airport_lounge_access_reward'].each do |reward_name|
+  reward = Reward.new(reward_name: reward_name)
+  reward.save!
+end
 
-# #Initial reward points 
-# (1..10).each do |number|
-#     user_reward = UserReward.new
-#     user_reward.user_id = number
-#     user_reward.reward_points = Random.rand(50..1000)
-#     user_reward.save!
+#Initial reward points 
+(1..10).each do |number|
+    user_reward = UserReward.new
+    user_reward.user_id = number
+    user_reward.reward_points = Random.rand(50..1000)
+    user_reward.save!
 #  end
 
  (1..50).each do |number|

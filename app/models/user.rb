@@ -20,7 +20,11 @@ def calculate_points_and_rewards
       tier = 'Standard'
     end
 
-   self.save!
+    #Reward calculation
+
+    
+
+    self.save!
 
  end
 end
